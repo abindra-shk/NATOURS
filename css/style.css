@@ -439,14 +439,16 @@ body {
 }
 
 .footer {
-  background-color: #333;
-  padding: 1rem 6rem;
+  background-color: hsla(0, 0%, 20%, 0.801);
+  padding: 1rem 6rem 0;
   font-size: 1.4rem;
   color: #f7f7f7;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: sticky;
   bottom: 0;
+  z-index: 30;
 }
 .footer .footer-logo {
   width: 8rem;
