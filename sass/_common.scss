@@ -75,6 +75,24 @@
 
 .row {
   display: flex;
-  padding: 0 6rem;
-  margin-bottom: 8rem;
+}
+
+.logo-box {
+  position: fixed;
+  top: 1.6rem;
+  left: 4rem;
+  z-index: 50;
+
+  .logo {
+    height: 35px;
+  }
+
+  @media (max-width: 767px) {
+    position: absolute;
+  }
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
 }
