@@ -1,64 +1,66 @@
 .section-features {
-    padding: 20rem 0;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba(126, 213, 111, 0.8),
-        rgba(40, 180, 133, 0.8)
-      ),
-      url(../img/nat-4.jpg);
-    background-size: cover;
-    transform: skewY(-7deg);
-    margin: -10rem 3rem 0;
-  
-    .row {
-      transform: skewY(7deg);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem; // Add gap between cards
-  
-      .card {
-        flex: 1 1 calc(25% - 2rem); // Adjust width and gap
-        background-color: rgba(255, 255, 255, 0.8);
-        font-size: 1.5rem;
-        padding: 2.5rem;
-        text-align: center;
-        border-radius: 3px;
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s;
-        margin-bottom: 2rem; // Add margin-bottom for wrapping
-  
-        .card-icon {
-          font-size: 6rem;
-          margin-bottom: 0.5rem;
-          display: inline-block;
-          background-image: linear-gradient(to right, #7ed56f, #28b485);
-          background-clip: text;
-          color: transparent;
-        }
-  
-        &:hover {
-          transform: translateY(-1.5rem) scale(1.03);
-        }
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)
+    ),
+    url(../img/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin: -10rem 3rem 0;
+
+  .row {
+    transform: skewY(7deg);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* Add gap between cards */
+
+    .card {
+      flex: 1 1 calc(25% - 2rem); /* Ensure cards take up 25% minus the gap */
+      max-width: calc(25% - 2rem); /* Ensure cards do not stretch beyond 25% */
+      background-color: rgba(255, 255, 255, 0.8);
+      font-size: 1.5rem;
+      padding: 2.5rem;
+      text-align: center;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s;
+
+      .card-icon {
+        font-size: 6rem;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, #7ed56f, #28b485);
+        background-clip: text;
+        color: transparent;
       }
-    }
-  
-    // Media Queries
-    @media (max-width: 1200px) {
-      .row .card {
-        flex: 1 1 calc(33.333% - 2rem); // 3 cards per row
-      }
-    }
-  
-    @media (max-width: 992px) {
-      .row .card {
-        flex: 1 1 calc(50% - 2rem); // 2 cards per row
-      }
-    }
-  
-    @media (max-width: 768px) {
-      .row .card {
-        flex: 1 1 100%; // 1 card per row
+
+      &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
       }
     }
   }
-  
+
+  /* Media Queries */
+  @media (max-width: 1200px) {
+    .row .card {
+      flex: 1 1 calc(33.333% - 2rem); /* 3 cards per row */
+      max-width: calc(33.333% - 2rem);
+    }
+  }
+
+  @media (max-width: 992px) {
+    .row .card {
+      flex: 1 1 calc(50% - 2rem); /* 2 cards per row */
+      max-width: calc(50% - 2rem);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .row .card {
+      flex: 1 1 100%; /* 1 card per row */
+      max-width: 100%;
+    }
+  }
+}
