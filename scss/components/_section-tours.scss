@@ -1,214 +1,245 @@
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 10rem;
-  margin-top: -10rem;
+  margin-top: -5rem;
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4rem; /* Add gap between cards */
-    justify-content: space-evenly;
-    padding: 4rem;
+  // @media (max-width: 1199px) {
+  //   padding: 20rem 0 8rem;
+  // }
 
-    .tour-card {
-      flex: 1 1 calc(33.333% - 4rem);
-      max-width: calc(33.333% - 4rem);
-      perspective: 150rem;
-      -moz-perspective: 150rem;
-      position: relative;
-      height: 52rem;
+  // @media (max-width: 991px) {
+  //   padding: 15rem 0 6rem;
+  // }
 
-      &-side {
+  @media (max-width: 767px) {
+    margin-top: 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15rem 2rem;
+
+    @media (max-width: 1199px) {
+      padding: 10rem 1.5rem;
+    }
+
+    @media (max-width: 991px) {
+      padding: 8rem 1rem;
+    }
+
+    @media (max-width: 767px) {
+      padding: 3rem 3rem;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4rem; /* Add gap between cards */
+      justify-content: space-evenly;
+
+      @media (max-width: 1199px) {
+        gap: 2rem;
+        padding: 3rem;
+      }
+
+      @media (max-width: 767px) {
+        display: block; /* Ensure cards stack vertically on smaller screens */
+        padding: 2rem;
+      }
+
+      .tour-card {
+        flex: 1 1 calc(33.333% - 4rem);
+        max-width: calc(33.333% - 4rem);
+        perspective: 150rem;
+        position: relative;
         height: 52rem;
-        transition: all 0.8s ease;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        backface-visibility: hidden;
-        border-radius: 3px;
-        overflow: hidden;
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 
-        &-front {
-          background-color: white;
+        @media (max-width: 1199px) {
+          flex: 1 1 calc(50% - 2rem); /* 2 cards per row */
+          max-width: calc(50% - 2rem);
         }
 
-        &-back {
-          transform: rotateY(180deg);
+        @media (max-width: 767px) {
+          flex: 1 1 100%; /* 1 card per row */
+          max-width: 100%;
+          margin-bottom: 4rem; /* Add margin between cards */
+        }
+
+        &-side {
+          height: 52rem;
+          transition: all 0.8s ease;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          backface-visibility: hidden;
+          border-radius: 3px;
+          overflow: hidden;
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+
+          &-front {
+            background-color: white;
+          }
+
+          &-back {
+            transform: rotateY(180deg);
+
+            &-1 {
+              background-image: linear-gradient(
+                to right bottom,
+                $color-secondary-light,
+                $color-secondary-dark
+              );
+            }
+
+            &-2 {
+              background-image: linear-gradient(
+                to right bottom,
+                $color-primary-light,
+                $color-primary-dark
+              );
+            }
+
+            &-3 {
+              background-image: linear-gradient(
+                to right bottom,
+                $color-tertiary-light,
+                $color-tertiary-dark
+              );
+            }
+          }
+        }
+
+        &:hover .tour-card-side-front {
+          transform: rotateY(-180deg);
+        }
+
+        &:hover .tour-card-side-back {
+          transform: rotateY(0);
+        }
+
+        &-picture {
+          background-size: cover;
+          height: 23rem;
+          background-blend-mode: screen;
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
+
+          &-1 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-secondary-light,
+                $color-secondary-dark
+              ),
+              url(../../assets/images/nat-5.jpg);
+          }
+
+          &-2 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-primary-light,
+                $color-primary-dark
+              ),
+              url(../../assets/images/nat-6.jpg);
+          }
+
+          &-3 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-tertiary-light,
+                $color-tertiary-dark
+              ),
+              url(../../assets/images/nat-7.jpg);
+          }
+        }
+
+        &-heading {
+          font-size: 2.8rem;
+          font-weight: 300;
+          text-transform: uppercase;
+          text-align: right;
+          color: $color-white;
+          position: absolute;
+          top: 12rem;
+          right: 2rem;
+          width: 75%;
+        }
+
+        &-heading-span {
+          padding: 1rem 1.5rem;
+          box-decoration-break: clone;
 
           &-1 {
             background-image: linear-gradient(
               to right bottom,
-              $color-secondary-light,
-              $color-secondary-dark
+              rgba($color-secondary-light, 0.85),
+              rgba($color-secondary-dark, 0.85)
             );
           }
 
           &-2 {
             background-image: linear-gradient(
               to right bottom,
-              $color-primary-light,
-              $color-primary-dark
+              rgba($color-primary-light, 0.85),
+              rgba($color-primary-dark, 0.85)
             );
           }
 
           &-3 {
             background-image: linear-gradient(
               to right bottom,
-              $color-tertiary-light,
-              $color-tertiary-dark
+              rgba($color-tertiary-light, 0.85),
+              rgba($color-tertiary-dark, 0.85)
             );
           }
         }
-      }
 
-      &:hover .tour-card-side-front {
-        transform: rotateY(-180deg);
-      }
+        &-details {
+          padding: 3rem;
 
-      &:hover .tour-card-side-back {
-        transform: rotateY(0);
-      }
+          ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
 
-      &-picture {
-        background-size: cover;
-        height: 23rem;
-        background-blend-mode: screen;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
+            li {
+              text-align: center;
+              font-size: 1.5rem;
+              padding: 1rem;
 
-        &-1 {
-          background-image: linear-gradient(
-              to right bottom,
-              $color-secondary-light,
-              $color-secondary-dark
-            ),
-            url(../../assets/images/nat-5.jpg);
-        }
-
-        &-2 {
-          background-image: linear-gradient(
-              to right bottom,
-              $color-primary-light,
-              $color-primary-dark
-            ),
-            url(../../assets/images/nat-6.jpg);
-        }
-
-        &-3 {
-          background-image: linear-gradient(
-              to right bottom,
-              $color-tertiary-light,
-              $color-tertiary-dark
-            ),
-            url(../../assets/images/nat-7.jpg);
-        }
-      }
-
-      &-heading {
-        font-size: 2.8rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        text-align: right;
-        color: $color-white;
-        position: absolute;
-        top: 12rem;
-        right: 2rem;
-        width: 75%;
-      }
-
-      &-heading-span {
-        padding: 1rem 1.5rem;
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-
-        &-1 {
-          background-image: linear-gradient(
-            to right bottom,
-            rgba($color-secondary-light, 0.85),
-            rgba($color-secondary-dark, 0.85)
-          );
-        }
-
-        &-2 {
-          background-image: linear-gradient(
-            to right bottom,
-            rgba($color-primary-light, 0.85),
-            rgba($color-primary-dark, 0.85)
-          );
-        }
-
-        &-3 {
-          background-image: linear-gradient(
-            to right bottom,
-            rgba($color-tertiary-light, 0.85),
-            rgba($color-tertiary-dark, 0.85)
-          );
-        }
-      }
-
-      &-details {
-        padding: 3rem;
-
-        ul {
-          list-style: none;
-          width: 80%;
-          margin: 0 auto;
-
-          li {
-            text-align: center;
-            font-size: 1.5rem;
-            padding: 1rem;
-
-            &:not(:last-child) {
-              border-bottom: 1px solid $color-grey-light-2;
+              &:not(:last-child) {
+                border-bottom: 1px solid $color-grey-light-2;
+              }
             }
           }
         }
-      }
 
-      &-cta {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        text-align: center;
-      }
+        &-cta {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 90%;
+          text-align: center;
+        }
 
-      &-price-box {
-        text-align: center;
-        color: $color-white;
-        margin-bottom: 8rem;
-      }
+        &-price-box {
+          text-align: center;
+          color: $color-white;
+          margin-bottom: 8rem;
+        }
 
-      &-price-only {
-        font-size: 1.4rem;
-        text-transform: uppercase;
-      }
+        &-price-only {
+          font-size: 1.4rem;
+          text-transform: uppercase;
+        }
 
-      &-price-value {
-        font-size: 6rem;
-        font-weight: 100;
+        &-price-value {
+          font-size: 6rem;
+          font-weight: 100;
+        }
       }
-
-      @media (max-width: 1199px) {
-        flex: 1 1 calc(50% - 2rem); /* 2 cards per row */
-        max-width: calc(50% - 2rem);
-      }
-
-      @media (max-width: 1023px) {
-        flex: 1 1 100%; /* 1 card per row */
-        max-width: 100%;
-      }
-    
-    
     }
   }
-
-  
-  
 }

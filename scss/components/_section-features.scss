@@ -1,5 +1,5 @@
 .section-features {
-  padding: 20rem 0;
+  padding: 15rem 0;
   background-image: linear-gradient(
       to right bottom,
       rgba(126, 213, 111, 0.8),
@@ -7,60 +7,85 @@
     ),
     url(../../assets/images/nat-4.jpg);
   background-size: cover;
-  transform: skewY(-7deg);
+  transform: skewY(-4deg);
   margin-top: -10rem;
 
-  .row {
-    transform: skewY(7deg);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem; /* Add gap between cards */
-    justify-content: space-evenly;
-    padding: 2rem;
+  @media (max-width: 991px) {
+    margin-top: -3rem;
+  }
 
-    .card {
-      flex: 1 1 calc(25% - 2rem); /* Ensure cards take up 25% minus the gap */
-      max-width: calc(25% - 2rem); /* Ensure cards do not stretch beyond 25% */
-      background-color: rgba(255, 255, 255, 0.8);
-      font-size: 1.5rem;
-      padding: 2.5rem;
-      text-align: center;
-      border-radius: 3px;
-      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s;
+  @media (max-width: 767px) {
+    transform: none;
+    margin-top: 0;
+    padding: 5rem 1rem;
+  }
 
-      @media (max-width: 1199px) {
-        flex: 1 1 calc(33.333% - 2rem); /* 3 cards per row */
-        max-width: calc(33.333% - 2rem);
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .row {
+      transform: skewY(4deg);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem; /* Add gap between cards */
+      justify-content: center;
+      padding: 2rem;
+
+      @media (max-width: 991px) {
+        margin-top: -7rem;
       }
-
-      @media (max-width: 1023px) {
-        flex: 1 1 calc(50% - 2rem); /* 2 cards per row */
-        max-width: calc(50% - 2rem);
-      }
-
+    
       @media (max-width: 767px) {
-        flex: 1 1 100%; /* 1 card per row */
-        max-width: 100%;
+        transform: none;
+        margin-top: 0;
       }
-
-      @media (max-width: 640px) {
-        flex: 1 1 100%; /* 1 card per row */
-        max-width: 100%;
-      }
-
-      .card-icon {
-        font-size: 6rem;
-        margin-bottom: 0.5rem;
-        display: inline-block;
-        background-image: linear-gradient(to right, #7ed56f, #28b485);
-        background-clip: text;
-        color: transparent;
-      }
-
-      &:hover {
-        transform: translateY(-1.5rem) scale(1.03);
+  
+      .card {
+        flex: 1 1 calc(25% - 2rem); /* Ensure cards take up 25% minus the gap */
+        max-width: calc(25% - 2rem); /* Ensure cards do not stretch beyond 25% */
+        background-color: rgba(255, 255, 255, 0.8);
+        font-size: 1.5rem;
+        padding: 2.5rem;
+        text-align: center;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s;
+  
+        @media (max-width: 1199px) {
+          flex: 1 1 calc(33.333% - 2rem); /* 3 cards per row */
+          max-width: calc(33.333% - 2rem);
+        }
+  
+        @media (max-width: 1023px) {
+          flex: 1 1 calc(50% - 2rem); /* 2 cards per row */
+          max-width: calc(50% - 2rem);
+        }
+  
+        @media (max-width: 767px) {
+          flex: 1 1 100%; /* 1 card per row */
+          max-width: 100%;
+        }
+  
+        @media (max-width: 640px) {
+          flex: 1 1 100%; /* 1 card per row */
+          max-width: 100%;
+        }
+  
+        .card-icon {
+          font-size: 6rem;
+          margin-bottom: 0.5rem;
+          display: inline-block;
+          background-image: linear-gradient(to right, #7ed56f, #28b485);
+          background-clip: text;
+          color: transparent;
+        }
+  
+        &:hover {
+          transform: translateY(-1.5rem) scale(1.03);
+        }
       }
     }
   }
+
 }

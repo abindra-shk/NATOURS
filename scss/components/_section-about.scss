@@ -1,98 +1,6 @@
 .section-about {
   background-color: #f7f7f7;
-  padding: 10rem 0;
   margin-top: -8rem;
-
-  .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-
-    .text-area {
-      width: 50%;
-
-      .text-heading {
-        font-size: 1.6rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 1.5rem;
-      }
-
-      .paragraph {
-        margin-bottom: 3rem;
-        font-size: 1.6rem;
-      }
-
-      .btn-link {
-        &:link,
-        &:visited {
-          font-size: 1.6rem;
-          color: #55c57a;
-          display: inline-block;
-          text-decoration: none;
-          border-bottom: 1px solid #55c57a;
-          padding: 3px;
-          transition: all 0.2s;
-        }
-
-        &:hover {
-          background-color: #55c57a;
-          color: #fff;
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-          transform: translateY(-2px);
-        }
-
-        &:active {
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-          transform: translateY(0);
-        }
-      }
-    }
-
-    .image-area {
-      width: 50%;
-      position: relative;
-
-      .image {
-        width: 55%;
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-        border-radius: 2px;
-        position: absolute;
-        z-index: 10;
-        transition: all 0.2s;
-        outline-offset: 2rem;
-
-        &-p1 {
-          left: 0;
-          top: -2rem;
-        }
-
-        &-p2 {
-          right: 0;
-          top: 2rem;
-        }
-
-        &-p3 {
-          left: 20%;
-          top: 10rem;
-        }
-
-        &:hover {
-          outline: 1.5rem solid #55c57a;
-          transform: scale(1.05) translateY(-0.5rem);
-          box-shadow: 0 2.5rem 4rem rgba(22, 22, 22, 0.986);
-          z-index: 20;
-        }
-      }
-
-      &:hover .image:not(:hover) {
-        transform: scale(0.95);
-        z-index: 10;
-      }
-    }
-  }
 
   @media (max-width: 992px) {
     margin-top: -7rem;
@@ -100,26 +8,172 @@
 
   @media (max-width: 768px) {
     margin-top: -5rem;
-    .row {
-      flex-direction: column;
-      padding: 5rem 2rem;
-      
-      .text-area, .image-area {
-        width: 100%;
-        padding: 1rem 0;
-      }
-    }
   }
 
   @media (max-width: 576px) {
     margin-top: 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10rem;
+
+    @media (max-width: 992px) {
+      padding: 8rem;
+    }
+  
+    @media (max-width: 768px) {
+      padding: 5rem;
+    }
+  
+    @media (max-width: 576px) {
+      padding: 2rem;
+    }
+
     .row {
-      flex-direction: column;
-      padding: 5rem 1rem;
-      
-      .text-area, .image-area {
-        width: 100%;
-        padding: 1rem 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 2rem 2rem;
+      }
+
+      @media (max-width: 576px) {
+        flex-direction: column;
+        padding: 2rem 1rem;
+      }
+
+      .text-area {
+        width: 50%;
+        padding:1rem;
+
+        @media (max-width: 768px), (max-width: 576px) {
+          width: 100%;
+          padding: 1rem 0;
+        }
+
+        .text-heading {
+          font-size: 1.6rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 1.5rem;
+        }
+
+        .paragraph {
+          margin-bottom: 3rem;
+          font-size: 1.6rem;
+        }
+
+        .btn-link {
+          &:link,
+          &:visited {
+            font-size: 1.6rem;
+            color: #55c57a;
+            display: inline-block;
+            text-decoration: none;
+            border-bottom: 1px solid #55c57a;
+            padding: 3px;
+            transition: all 0.2s;
+          }
+
+          &:hover {
+            background-color: #55c57a;
+            color: #fff;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+          }
+
+          &:active {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            transform: translateY(0);
+          }
+        }
+      }
+
+      .image-area {
+        width: 50%;
+        position: relative;
+
+        @media (max-width: 768px), (max-width: 576px) {
+          width: 100%;
+          padding: 1rem 0;
+          position: static; /* Remove absolute positioning on smaller screens */
+        }
+
+        .image {
+          width: 55%;
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+          border-radius: 2px;
+          position: absolute;
+          z-index: 10;
+          transition: all 0.2s;
+          outline-offset: 2rem;
+
+          @media (max-width: 768px), (max-width: 576px) {
+            width: 100%; /* Adjust width for smaller screens */
+            position: static; /* Remove absolute positioning on smaller screens */
+            margin-bottom: 2rem; /* Add margin for spacing */
+          }
+
+          &-p1 {
+            left: 0;
+            top: 10%;
+
+            @media (max-width: 768px), (max-width: 576px) {
+              left: auto;
+              top: auto;
+            }
+          }
+
+          &-p2 {
+            left: 20%;
+            top: 30%;
+
+            @media (max-width: 768px), (max-width: 576px) {
+              left: auto;
+              top: auto;
+            }
+          }
+
+          &-p3 {
+            right: 0;
+            top: 20%;
+
+            @media (max-width: 768px), (max-width: 576px) {
+              right: auto;
+              top: auto;
+            }
+          }
+
+          &:hover {
+            outline: 1.5rem solid #55c57a;
+            transform: scale(1.05) translateY(-0.5rem);
+            box-shadow: 0 2.5rem 4rem rgba(22, 22, 22, 0.986);
+            z-index: 20;
+
+            @media (max-width: 768px), (max-width: 576px) {
+              transform: none; /* Remove transform on hover for smaller screens */
+              box-shadow: none; /* Remove shadow on hover for smaller screens */
+              outline: none; /* Remove outline on hover for smaller screens */
+            }
+          }
+        }
+
+        @media (max-width: 768px), (max-width: 576px) {
+          .image {
+            width: 100%; /* Adjust width for smaller screens */
+            position: static; /* Remove absolute positioning on smaller screens */
+            margin-bottom: 2rem; /* Add margin for spacing */
+          }
+
+          &:hover .image:not(:hover) {
+            transform: none; /* Remove transform on hover for smaller screens */
+            z-index: auto; /* Remove z-index adjustment on hover for smaller screens */
+          }
+        }
       }
     }
   }

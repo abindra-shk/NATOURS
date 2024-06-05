@@ -1,7 +1,23 @@
 .section-stories {
-    position: relative;
+  position: relative;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 15rem 0;
-  
+
+    @media (max-width: 992px) {
+      padding: 8rem;
+    }
+
+    @media (max-width: 768px) {
+      padding: 5rem;
+    }
+
+    @media (max-width: 576px) {
+      padding: 3rem;
+    }
+
     .bg-video {
       position: absolute;
       top: 0;
@@ -11,26 +27,35 @@
       z-index: -1;
       opacity: 0.15;
       overflow: hidden;
-  
+
       &-content {
         height: 100%;
         width: 100%;
         object-fit: cover;
       }
     }
-  
+
     .column {
+    
       .story {
         width: 75%;
-        margin: 0 auto 6rem;
-        box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
-        background-color: rgba($color-white, 0.6);
+        margin: 5rem auto;
+        box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.6);
         border-radius: 3px;
         padding: 6rem;
         padding-left: 9rem;
-        font-size: $default-font-size;
+        font-size: 1.6rem;
         transform: skewX(-12deg);
-  
+        transition: transform 0.3s;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          padding: 4rem;
+          padding-left: 7rem;
+          transform: none;
+        }
+
         &-figure {
           width: 15rem;
           height: 15rem;
@@ -39,38 +64,62 @@
           clip-path: circle(50% at 50% 50%);
           transform: translateX(-3rem) skewX(12deg);
           position: relative;
-  
+
+          @media (max-width: 768px) {
+            transform: translateX(-3rem);
+          }
+
           &-img {
             height: 100%;
             transform: translateX(-4rem) scale(1.4);
             backface-visibility: hidden;
             transition: all 0.5s;
+
+            @media (max-width: 768px) {
+              transform: translateX(-2rem) scale(1.2);
+            }
           }
-  
+
           &-caption {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, 20%);
-            color: $color-white;
+            color: white;
             text-transform: uppercase;
             font-size: 1.7rem;
             text-align: center;
             opacity: 0;
             transition: all 0.5s;
             backface-visibility: hidden;
+
+            @media (max-width: 768px) {
+              font-size: 1.5rem;
+            }
           }
         }
-  
+
         &-text {
           transform: skewX(12deg);
+
+          @media (max-width: 768px) {
+            transform: none;
+          }
+
+          &-heading {
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+
+
         }
-  
+
         &:hover .story-figure-caption {
           opacity: 1;
           transform: translate(-50%, -50%);
         }
-  
+
         &:hover .story-figure-img {
           transform: translateX(-4rem) scale(1);
           filter: blur(3px) brightness(80%);
@@ -78,3 +127,4 @@
       }
     }
   }
+}

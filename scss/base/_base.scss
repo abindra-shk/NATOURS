@@ -8,6 +8,26 @@ html {
   font-size: 62.5%;
 }
 
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; // 1 rem = 10px; 10px/16px = 62.5%
+
+  // Media query for tablet landscape (width < 1200px)
+  @media (max-width: 1200px) {
+    font-size: 56.25%; // 1 rem = 9px, 9/16 = 56.25%
+  }
+
+  // Media query for tablet portrait (width < 900px)
+  @media (max-width: 900px) {
+    font-size: 50%; // 1 rem = 8px, 8/16 = 50%
+  }
+
+  // Media query for big desktop
+  @media (min-width: 1800px) {
+    font-size: 75%; // 1 rem = 12px, 12/16 = 75%
+  }
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -16,18 +36,13 @@ body {
   color: #777;
 }
 
-.wrapper{
-  position:relative;
+.wrapper {
+  position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 0 3rem;
-
-  @media (max-width: 1199px) {
-    padding: 0 3rem;
-  }
+  // padding: 0 3rem;
 
   @media (max-width: 767px) {
     padding: 0;
   }
-
 }

@@ -4,6 +4,15 @@
   z-index: 100;
 }
 
+.btn {
+  &:active {
+  }
+
+  &:link,
+  &:visited {
+  }
+}
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -69,7 +78,7 @@
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
   text-transform: uppercase;
 
   @media (max-width: 1200px) {
@@ -81,14 +90,15 @@
   }
 
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 0;
   }
 
   @media (max-width: 576px) {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 0;
   }
 }
-
 
 .row {
   display: flex;
@@ -109,7 +119,8 @@
   }
 }
 
-.container{
-  max-width: 1200px;
-  margin: 0 auto;
-}
+// .container {
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 5rem;
+// }
