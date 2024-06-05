@@ -71,7 +71,24 @@
   transition: all 0.2s;
   margin-bottom: 8rem;
   text-transform: uppercase;
+
+  @media (max-width: 1200px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 2rem;
+  }
 }
+
 
 .row {
   display: flex;
