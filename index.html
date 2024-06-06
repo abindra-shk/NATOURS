@@ -14,8 +14,15 @@
     />
     <link rel="stylesheet" href="./assets/icon-font.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png" />
-
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./assets/images/favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Natours | FlexBox</title>
   </head>
   <body>
@@ -179,9 +186,21 @@
                 <a href="" class="btn-link">Learn more &rarr;</a>
               </div>
               <div class="image-area">
-                <img src="./assets/images/nat-1-large.jpg" alt="" class="image image-p1" />
-                <img src="./assets/images/nat-2-large.jpg" alt="" class="image image-p2" />
-                <img src="./assets/images/nat-3-large.jpg" alt="" class="image image-p3" />
+                <img
+                  src="./assets/images/nat-1-large.jpg"
+                  alt=""
+                  class="image image-p1"
+                />
+                <img
+                  src="./assets/images/nat-2-large.jpg"
+                  alt=""
+                  class="image image-p2"
+                />
+                <img
+                  src="./assets/images/nat-3-large.jpg"
+                  alt=""
+                  class="image image-p3"
+                />
               </div>
             </div>
           </div>
@@ -342,7 +361,9 @@
                     alt="Person on a tour"
                     class="story-figure-img"
                   />
-                  <figcaption class="story-figure-caption">Mary Smith</figcaption>
+                  <figcaption class="story-figure-caption">
+                    Mary Smith
+                  </figcaption>
                 </figure>
                 <div class="story-text">
                   <h3 class="story-text-heading">
@@ -351,9 +372,10 @@
                   <p class="story-text-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Aperiam, ipsum sapiente aspernatur libero repellat quis
-                    consequatur ducimus quam nisi exercitationem omnis earum qui.
-                    Aperiam, ipsum sapiente aspernatur libero repellat quis
-                    consequatur ducimus quam nisi exercitationem omnis earum qui.
+                    consequatur ducimus quam nisi exercitationem omnis earum
+                    qui. Aperiam, ipsum sapiente aspernatur libero repellat quis
+                    consequatur ducimus quam nisi exercitationem omnis earum
+                    qui.
                   </p>
                 </div>
               </div>
@@ -374,6 +396,40 @@
           Modified by: Abindra
         </div>
       </footer>
+      <section class="section-swiper">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>

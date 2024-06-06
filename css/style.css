@@ -53,10 +53,6 @@
 html {
   font-size: 62.5%;
 }
-
-html {
-  font-size: 62.5%;
-}
 @media (max-width: 1200px) {
   html {
     font-size: 56.25%;
@@ -65,11 +61,6 @@ html {
 @media (max-width: 900px) {
   html {
     font-size: 50%;
-  }
-}
-@media (min-width: 1800px) {
-  html {
-    font-size: 75%;
   }
 }
 
@@ -86,20 +77,8 @@ body {
   overflow: hidden;
   width: 100%;
 }
-@media (max-width: 767px) {
-  .wrapper {
-    padding: 0;
-  }
-}
 
-.sticky {
-  position: sticky;
-  top: 9rem;
-  z-index: 100;
-}
-
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
@@ -108,22 +87,21 @@ body {
   transition: all 0.2s;
   position: relative;
 }
-
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-
 .btn-white {
   background-color: #fff;
   color: #777;
 }
-
+.btn-white::after {
+  background-color: #fff;
+}
 .btn::after {
   content: "";
   display: inline-block;
@@ -136,16 +114,10 @@ body {
   z-index: -1;
   transition: all 0.4s;
 }
-
-.btn-white::after {
-  background-color: #fff;
-}
-
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
-
 .btn-animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
@@ -206,6 +178,21 @@ body {
   .logo-box {
     position: absolute;
   }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-top: 50px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+  background: #333;
 }
 
 .section-about {
@@ -327,7 +314,8 @@ body {
   .section-about .container .row .image-area .image {
     width: 100%; /* Adjust width for smaller screens */
     position: static; /* Remove absolute positioning on smaller screens */
-    margin-bottom: 2rem; /* Add margin for spacing */
+    margin-bottom: 2rem;
+    box-shadow: none;
   }
 }
 .section-about .container .row .image-area .image-p1 {
@@ -745,7 +733,7 @@ body {
 .section-tours .container .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem; /* Add gap between cards */
+  gap: 4rem;
   justify-content: space-evenly;
 }
 @media (max-width: 1199px) {
@@ -756,7 +744,7 @@ body {
 }
 @media (max-width: 767px) {
   .section-tours .container .row {
-    display: block; /* Ensure cards stack vertically on smaller screens */
+    display: block;
     padding: 2rem;
   }
 }
@@ -769,18 +757,18 @@ body {
 }
 @media (max-width: 1199px) {
   .section-tours .container .row .tour-card {
-    flex: 1 1 calc(50% - 2rem); /* 2 cards per row */
+    flex: 1 1 calc(50% - 2rem);
     max-width: calc(50% - 2rem);
   }
 }
 @media (max-width: 767px) {
   .section-tours .container .row .tour-card {
-    flex: 1 1 100%; /* 1 card per row */
+    flex: 1 1 100%;
     max-width: 100%;
-    margin-bottom: 4rem; /* Add margin between cards */
+    margin-bottom: 4rem;
   }
 }
-.section-tours .container .row .tour-card-side {
+.section-tours .container .row .tour-card .tour-card-side {
   height: 52rem;
   transition: all 0.8s ease;
   position: absolute;
@@ -792,19 +780,19 @@ body {
   overflow: hidden;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
-.section-tours .container .row .tour-card-side-front {
+.section-tours .container .row .tour-card .tour-card-side-front {
   background-color: white;
 }
-.section-tours .container .row .tour-card-side-back {
+.section-tours .container .row .tour-card .tour-card-side-back {
   transform: rotateY(180deg);
 }
-.section-tours .container .row .tour-card-side-back-1 {
+.section-tours .container .row .tour-card .tour-card-side-back-1 {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
-.section-tours .container .row .tour-card-side-back-2 {
+.section-tours .container .row .tour-card .tour-card-side-back-2 {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
 }
-.section-tours .container .row .tour-card-side-back-3 {
+.section-tours .container .row .tour-card .tour-card-side-back-3 {
   background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
 }
 .section-tours .container .row .tour-card:hover .tour-card-side-front {

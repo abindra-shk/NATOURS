@@ -115,7 +115,8 @@
           @media (max-width: 768px), (max-width: 576px) {
             width: 100%; /* Adjust width for smaller screens */
             position: static; /* Remove absolute positioning on smaller screens */
-            margin-bottom: 2rem; /* Add margin for spacing */
+            margin-bottom: 2rem;
+            box-shadow: none;
           }
 
           &-p1 {
