@@ -523,8 +523,8 @@ body {
   }
 }
 .section-features .container .row .card {
-  flex: 1 1 calc(25% - 2rem); /* Ensure cards take up 25% minus the gap */
-  max-width: calc(25% - 2rem); /* Ensure cards do not stretch beyond 25% */
+  flex: 1 1 calc(25% - 2rem);
+  max-width: calc(25% - 2rem);
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
   padding: 2.5rem;
@@ -535,25 +535,25 @@ body {
 }
 @media (max-width: 1199px) {
   .section-features .container .row .card {
-    flex: 1 1 calc(33.333% - 2rem); /* 3 cards per row */
+    flex: 1 1 calc(33.333% - 2rem);
     max-width: calc(33.333% - 2rem);
   }
 }
 @media (max-width: 1023px) {
   .section-features .container .row .card {
-    flex: 1 1 calc(50% - 2rem); /* 2 cards per row */
+    flex: 1 1 calc(50% - 2rem);
     max-width: calc(50% - 2rem);
   }
 }
 @media (max-width: 767px) {
   .section-features .container .row .card {
-    flex: 1 1 100%; /* 1 card per row */
+    flex: 1 1 100%;
     max-width: 100%;
   }
 }
 @media (max-width: 640px) {
   .section-features .container .row .card {
-    flex: 1 1 100%; /* 1 card per row */
+    flex: 1 1 100%;
     max-width: 100%;
   }
 }
