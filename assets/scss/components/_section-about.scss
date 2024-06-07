@@ -36,7 +36,7 @@
         width: 50%;
         padding: 1rem;
 
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
           width: 100%;
           padding: 1rem 0;
         }
@@ -75,90 +75,6 @@
           &:active {
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
             transform: translateY(0);
-          }
-        }
-      }
-
-      .image-area {
-        width: 50%;
-        position: relative;
-
-        @media (max-width: 768px) {
-          width: 100%;
-          padding: 1rem 0;
-          position: static; /* Remove absolute positioning on smaller screens */
-        }
-
-        .image {
-          width: 55%;
-          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-          border-radius: 2px;
-          position: absolute;
-          z-index: 10;
-          transition: all 0.2s;
-          outline-offset: 2rem;
-
-          @media (max-width: 768px) {
-            width: 100%; /* Adjust width for smaller screens */
-            position: static; /* Remove absolute positioning on smaller screens */
-            margin-bottom: 2rem;
-            box-shadow: none;
-          }
-
-          &-p1 {
-            left: 0;
-            top: 10%;
-
-            @media (max-width: 768px) {
-              left: auto;
-              top: auto;
-            }
-          }
-
-          &-p2 {
-            left: 20%;
-            top: 30%;
-
-            @media (max-width: 768px) {
-              left: auto;
-              top: auto;
-            }
-          }
-
-          &-p3 {
-            right: 0;
-            top: 20%;
-
-            @media (max-width: 768px) {
-              right: auto;
-              top: auto;
-            }
-          }
-
-          &:hover {
-            outline: 1.5rem solid #55c57a;
-            transform: scale(1.05) translateY(-0.5rem);
-            box-shadow: 0 2.5rem 4rem rgba(22, 22, 22, 0.986);
-            z-index: 20;
-
-            @media (max-width: 768px) {
-              transform: none; /* Remove transform on hover for smaller screens */
-              box-shadow: none; /* Remove shadow on hover for smaller screens */
-              outline: none; /* Remove outline on hover for smaller screens */
-            }
-          }
-        }
-
-        @media (max-width: 768px) {
-          .image {
-            width: 100%; /* Adjust width for smaller screens */
-            position: static; /* Remove absolute positioning on smaller screens */
-            margin-bottom: 2rem; /* Add margin for spacing */
-          }
-
-          &:hover .image:not(:hover) {
-            transform: none; /* Remove transform on hover for smaller screens */
-            z-index: auto; /* Remove z-index adjustment on hover for smaller screens */
           }
         }
       }
