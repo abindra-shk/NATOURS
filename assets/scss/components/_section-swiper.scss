@@ -1,6 +1,5 @@
 .section-swiper {
   width: 50%;
-  // height: 500px; // Default height for desktop
   background-color: #f7f7f7;
 
   .swiper1 {
@@ -29,13 +28,13 @@
     }
 
     .swiper-pagination-bullet {
-      background: #9b9b9b; // Color of pagination bullets
-      opacity: 0.7; // Slight transparency
+      background: #9b9b9b; 
+      opacity: 0.7; 
     }
 
     .swiper-pagination-bullet-active {
-      background: #5c5959; // Color of active pagination bullet
-      opacity: 1; // Fully opaque
+      background: #5c5959; 
+      opacity: 1; 
     }
   }
 
