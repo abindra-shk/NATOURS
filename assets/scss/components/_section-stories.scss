@@ -1,23 +1,20 @@
 .section-stories {
   position: relative;
+  padding: 10rem 0;
+
+  @media (max-width: 991px) {
+    padding: 8rem 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 5rem 0;
+  }
+
+  @media (max-width: 576px) {
+    padding: 3rem 0;
+  }
 
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15rem 0;
-
-    @media (max-width: 992px) {
-      padding: 8rem;
-    }
-
-    @media (max-width: 768px) {
-      padding: 5rem;
-    }
-
-    @media (max-width: 576px) {
-      padding: 3rem;
-    }
-
     .bg-video {
       position: absolute;
       top: 0;
@@ -36,7 +33,13 @@
     }
 
     .column {
-    
+      display: flex;
+
+      @media (max-width: 768px) {
+        // flex-direction: column;
+        align-items: center;
+      }
+
       .story {
         width: 75%;
         margin: 5rem auto;
@@ -48,12 +51,15 @@
         font-size: 1.6rem;
         transform: skewX(-12deg);
         transition: transform 0.3s;
+       
 
         @media (max-width: 768px) {
           width: 100%;
-          padding: 4rem;
-          padding-left: 7rem;
+          padding: 5rem;
           transform: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
 
         &-figure {
@@ -63,10 +69,14 @@
           shape-outside: circle(50% at 50% 50%);
           clip-path: circle(50% at 50% 50%);
           transform: translateX(-3rem) skewX(12deg);
+          margin: 0 3rem 1rem 0;
           position: relative;
 
           @media (max-width: 768px) {
-            transform: translateX(-3rem);
+            float: none;
+            shape-outside: none;
+            transform: none;
+
           }
 
           &-img {
@@ -76,7 +86,7 @@
             transition: all 0.5s;
 
             @media (max-width: 768px) {
-              transform: translateX(-2rem) scale(1.2);
+              transform: translateX(0) scale(1.2);
             }
           }
 
@@ -104,6 +114,7 @@
 
           @media (max-width: 768px) {
             transform: none;
+            text-align: center;
           }
 
           &-heading {
@@ -111,8 +122,6 @@
             font-weight: 700;
             text-transform: uppercase;
           }
-
-
         }
 
         &:hover .story-figure-caption {

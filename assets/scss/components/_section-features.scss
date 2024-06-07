@@ -1,5 +1,5 @@
 .section-features {
-  padding: 15rem 0;
+  padding: 10rem 0;
   background-image: linear-gradient(
       to right bottom,
       rgba(126, 213, 111, 0.8),
@@ -12,25 +12,28 @@
 
   @media (max-width: 991px) {
     margin-top: -3rem;
+    padding:15rem 0
   }
 
   @media (max-width: 767px) {
     transform: none;
     margin-top: 0;
-    padding: 5rem 1rem;
+    padding:5rem 0;
+  }
+
+  @media (max-width: 576px) {
+    transform: none;
+    margin-top: 0;
+    padding:3rem 0
   }
 
   .container{
-    max-width: 1200px;
-    margin: 0 auto;
-
     .row {
       transform: skewY(4deg);
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem; /* Add gap between cards */
+      gap: 2rem;
       justify-content: center;
-      padding: 2rem;
 
       @media (max-width: 991px) {
         margin-top: -7rem;
