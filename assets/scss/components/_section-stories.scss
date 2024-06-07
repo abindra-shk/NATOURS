@@ -41,7 +41,6 @@
 
       .story {
         width: 75%;
-        margin: 5rem auto;
         box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
         background-color: rgba(255, 255, 255, 0.6);
         border-radius: 3px;
@@ -54,7 +53,7 @@
 
         @media (max-width: 768px) {
           width: 100%;
-          padding: 5rem;
+          padding: 2rem;
           transform: none;
           display: flex;
           flex-direction: column;
@@ -75,6 +74,7 @@
             float: none;
             shape-outside: none;
             transform: none;
+            margin-bottom: 2rem;
 
           }
 

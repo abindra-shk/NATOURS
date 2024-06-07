@@ -57,7 +57,7 @@
         margin-right: 0;
       }
 
-      .dropbtn {
+      .drop-btn {
         display: flex;
         align-items: center;
       }
@@ -128,7 +128,7 @@
     }
   }
 
-  .navigation__background {
+  .navigation-background {
     height: 5rem;
     width: 5rem;
     position: fixed;
@@ -200,7 +200,7 @@
       animation-name: moveOutLeft;
     }
 
-    .menu-toggle:checked ~ .navigation__background {
+    .menu-toggle:checked ~ .navigation-background {
       transform: scale(80);
     }
   }
@@ -208,7 +208,7 @@
 
 // Ensure .menu-icon is hidden on larger screens
 @media (min-width: 769px) {
-  .navigation__background {
+  .navigation-background {
     display: none;
   }
 

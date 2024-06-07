@@ -36,7 +36,7 @@
         width: 50%;
         padding: 1rem;
 
-        @media (max-width: 768px), (max-width: 576px) {
+        @media (max-width: 768px){
           width: 100%;
           padding: 1rem 0;
         }
@@ -83,7 +83,7 @@
         width: 50%;
         position: relative;
 
-        @media (max-width: 768px), (max-width: 576px) {
+        @media (max-width: 768px) {
           width: 100%;
           padding: 1rem 0;
           position: static; /* Remove absolute positioning on smaller screens */
@@ -98,7 +98,7 @@
           transition: all 0.2s;
           outline-offset: 2rem;
 
-          @media (max-width: 768px), (max-width: 576px) {
+          @media (max-width: 768px) {
             width: 100%; /* Adjust width for smaller screens */
             position: static; /* Remove absolute positioning on smaller screens */
             margin-bottom: 2rem;
@@ -109,7 +109,7 @@
             left: 0;
             top: 10%;
 
-            @media (max-width: 768px), (max-width: 576px) {
+            @media (max-width: 768px) {
               left: auto;
               top: auto;
             }
@@ -119,7 +119,7 @@
             left: 20%;
             top: 30%;
 
-            @media (max-width: 768px), (max-width: 576px) {
+            @media (max-width: 768px) {
               left: auto;
               top: auto;
             }
@@ -129,7 +129,7 @@
             right: 0;
             top: 20%;
 
-            @media (max-width: 768px), (max-width: 576px) {
+            @media (max-width: 768px) {
               right: auto;
               top: auto;
             }
@@ -141,7 +141,7 @@
             box-shadow: 0 2.5rem 4rem rgba(22, 22, 22, 0.986);
             z-index: 20;
 
-            @media (max-width: 768px), (max-width: 576px) {
+            @media (max-width: 768px) {
               transform: none; /* Remove transform on hover for smaller screens */
               box-shadow: none; /* Remove shadow on hover for smaller screens */
               outline: none; /* Remove outline on hover for smaller screens */
@@ -149,7 +149,7 @@
           }
         }
 
-        @media (max-width: 768px), (max-width: 576px) {
+        @media (max-width: 768px) {
           .image {
             width: 100%; /* Adjust width for smaller screens */
             position: static; /* Remove absolute positioning on smaller screens */

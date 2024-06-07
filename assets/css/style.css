@@ -65,10 +65,7 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
+  font: 400 1.6rem/1.7 "Lato", sans-serif;
   color: #777;
 }
 
@@ -243,7 +240,7 @@ body {
   width: 50%;
   padding: 1rem;
 }
-@media (max-width: 768px), (max-width: 576px) {
+@media (max-width: 768px) {
   .section-about .container .row .text-area {
     width: 100%;
     padding: 1rem 0;
@@ -282,7 +279,7 @@ body {
   width: 50%;
   position: relative;
 }
-@media (max-width: 768px), (max-width: 576px) {
+@media (max-width: 768px) {
   .section-about .container .row .image-area {
     width: 100%;
     padding: 1rem 0;
@@ -298,7 +295,7 @@ body {
   transition: all 0.2s;
   outline-offset: 2rem;
 }
-@media (max-width: 768px), (max-width: 576px) {
+@media (max-width: 768px) {
   .section-about .container .row .image-area .image {
     width: 100%; /* Adjust width for smaller screens */
     position: static; /* Remove absolute positioning on smaller screens */
@@ -310,7 +307,7 @@ body {
   left: 0;
   top: 10%;
 }
-@media (max-width: 768px), (max-width: 576px) {
+@media (max-width: 768px) {
   .section-about .container .row .image-area .image-p1 {
     left: auto;
     top: auto;
@@ -320,7 +317,7 @@ body {
   left: 20%;
   top: 30%;
 }
-@media (max-width: 768px), (max-width: 576px) {
+@media (max-width: 768px) {
   .section-about .container .row .image-area .image-p2 {
     left: auto;
     top: auto;
@@ -330,7 +327,7 @@ body {
   right: 0;
   top: 20%;
 }
-@media (max-width: 768px), (max-width: 576px) {
+@media (max-width: 768px) {
   .section-about .container .row .image-area .image-p3 {
     right: auto;
     top: auto;
@@ -342,14 +339,14 @@ body {
   box-shadow: 0 2.5rem 4rem rgba(22, 22, 22, 0.986);
   z-index: 20;
 }
-@media (max-width: 768px), (max-width: 576px) {
+@media (max-width: 768px) {
   .section-about .container .row .image-area .image:hover {
     transform: none; /* Remove transform on hover for smaller screens */
     box-shadow: none; /* Remove shadow on hover for smaller screens */
     outline: none; /* Remove outline on hover for smaller screens */
   }
 }
-@media (max-width: 768px), (max-width: 576px) {
+@media (max-width: 768px) {
   .section-about .container .row .image-area .image {
     width: 100%; /* Adjust width for smaller screens */
     position: static; /* Remove absolute positioning on smaller screens */
@@ -613,7 +610,6 @@ body {
 }
 .section-stories .container .column .story {
   width: 75%;
-  margin: 5rem auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
@@ -626,7 +622,7 @@ body {
 @media (max-width: 768px) {
   .section-stories .container .column .story {
     width: 100%;
-    padding: 5rem;
+    padding: 2rem;
     transform: none;
     display: flex;
     flex-direction: column;
@@ -648,6 +644,7 @@ body {
     float: none;
     shape-outside: none;
     transform: none;
+    margin-bottom: 2rem;
   }
 }
 .section-stories .container .column .story-figure-img {
@@ -975,7 +972,7 @@ body {
 .header .nav-bar .nav-items .nav-item:last-child {
   margin-right: 0;
 }
-.header .nav-bar .nav-items .nav-item .dropbtn {
+.header .nav-bar .nav-items .nav-item .drop-btn {
   display: flex;
   align-items: center;
 }
@@ -1033,7 +1030,7 @@ body {
   margin: 2rem 0;
   text-align: center;
 }
-.header .nav-bar .navigation__background {
+.header .nav-bar .navigation-background {
   height: 5rem;
   width: 5rem;
   position: fixed;
@@ -1094,12 +1091,12 @@ body {
   .header .nav-bar .menu-toggle:not(:checked) ~ .nav-items-mobile {
     animation-name: moveOutLeft;
   }
-  .header .nav-bar .menu-toggle:checked ~ .navigation__background {
+  .header .nav-bar .menu-toggle:checked ~ .navigation-background {
     transform: scale(80);
   }
 }
 @media (min-width: 769px) {
-  .header .navigation__background {
+  .header .navigation-background {
     display: none;
   }
   .header .menu-icon {
